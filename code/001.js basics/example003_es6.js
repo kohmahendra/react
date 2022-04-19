@@ -60,3 +60,36 @@ function printMe(name,aggreeedTerms=true){
 
 printMe('John');
 printMe('John',false);
+
+function addAll(...i){
+    return i.reduce((a,b)=>a+b,0);
+}
+
+console.log(addAll(1,2,3,4,5));
+
+function printMe(param1,param2,...remaining){
+    console.log(param1);
+    console.log(param2);
+    console.log(remaining);
+}
+
+console.log(printMe(1,2,3,4,5));
+
+let iArr=[1,2,3,4];
+let jArr=[5,6,7,8];
+let kArr=[...iArr,...jArr];
+kArr.forEach((e)=>console.log(e));
+
+let person={
+    firstName:"Mahendra",
+    lastName:"Pappu"
+}
+
+const {firstName,lastName} =person;
+console.log(firstName+':'+lastName);
+
+//array Destructuring 
+let numbers=[1,2,3,4]
+  
+const [i,j,k] =numbers;
+console.log(i+':'+j+':'+k);
